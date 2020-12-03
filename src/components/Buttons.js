@@ -1,18 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 
-export class Buttons extends Component {
-  render() {
-    return (
-      <div>
-        <div className="btn">
-          <button onClick={this.props.previous}>Previous</button>
-          <button onClick={this.props.submit}>submit</button>
-          <button onClick={this.props.next}>Next</button>
-          <button onClick={this.props.submit}>show Answer</button>
-        </div>
+export default function Buttons(props) {
+  return (
+    <div>
+      <div className="btn">
+        <button onClick={props.previous}>Previous</button>
+        <button onClick={props.submit}>submit</button>
+        <button onClick={props.next}>Next</button>
+        <button onClick={props.submit}>show Answer</button>
       </div>
-    );
-  }
+    </div>
+  );
 }
-
-export default Buttons;

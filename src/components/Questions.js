@@ -1,13 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 
-export class Questions extends Component {
-  render() {
-    return (
-      <div>
-        <div className="question">{this.props.data[this.props.i].question}</div>
-      </div>
-    );
-  }
+export default function Questions(props) {
+  return (
+    <div>
+      <div className="question">{props.data[props.i].question}</div>
+    </div>
+  );
 }
-
-export default Questions;

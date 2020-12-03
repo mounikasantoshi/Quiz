@@ -1,20 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
 
-export class Options extends Component {
-  render() {
-    return (
-      <div>
-        <div className="options">
-          {this.props.data[this.props.i].ans.map((option) => (
-            <div>
-              <input value={option} type="radio" name="radio"></input>
-              <label>{option}</label>
-            </div>
-          ))}
-        </div>
+export default function Options(props) {
+  return (
+    <div>
+      <div className="options">
+        {props.data[props.i].ans.map((option) => (
+          <div>
+            <input value={option} type="radio" name="radio"></input>
+            <label>{option}</label>
+          </div>
+        ))}
       </div>
-    );
-  }
+    </div>
+  );
 }
-
-export default Options;
